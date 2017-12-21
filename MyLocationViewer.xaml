@@ -4,19 +4,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:StackOverflowTesting"
-             mc:Ignorable="d" MinWidth="450" MinHeight="30">
+             mc:Ignorable="d" MinWidth="200" MinHeight="30">
  <Grid Background="Purple">
   <Grid.RowDefinitions>
    <RowDefinition Height="30px"/>
    <RowDefinition Height="Auto"/>
-   <RowDefinition Height="*"/>
+   <RowDefinition Height="Auto"/>
    <RowDefinition Height="1px"/>
   </Grid.RowDefinitions>
   <Grid.ColumnDefinitions>
    <ColumnDefinition Width="Auto"/>
    <ColumnDefinition Width="*"/>
   </Grid.ColumnDefinitions>
-  <TextBox AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="1" Grid.RowSpan="3" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+  <Border x:Name="b" Grid.Column="1" Grid.RowSpan="3" HorizontalAlignment="Stretch"/>
+  <TextBox AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="1" Grid.RowSpan="3" Width="{Binding ActualWidth, ElementName=b}" Height="{Binding ActualHeight, ElementName=b}" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
   <Label Content="Content"/>
   <Label Content="Content" Grid.Row="1"/>
   <Label Content="More content" Grid.Row="2"/>

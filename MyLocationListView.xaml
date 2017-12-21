@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" BorderThickness="1" BorderBrush="#688CAF">
  <Grid x:Name="locationListView" Background="White">
-  <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible">
+  <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
    <StackPanel x:Name="myStackPanel"/>
   </ScrollViewer>
  </Grid>
